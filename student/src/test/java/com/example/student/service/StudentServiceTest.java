@@ -59,6 +59,8 @@ studentService.getStudentById(1L);
 
 // Assert
 assertNotNull(result);
+// hey
+System.out.println("Result: " + result.getName() + ", " + result.getCourse());
 
 assertEquals(1L, result.getId());
 
