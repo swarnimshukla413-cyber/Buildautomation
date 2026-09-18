@@ -72,5 +72,22 @@ assertEquals("Java", result.getCourse());
 verify(studentRepository)
 .findById(1L);
 }
+
+@Test
+void testSaveStudent() {
+
+Student student =
+new Student(2L, "Alice", "Spring Boot");
+
+when(studentRepository.save(student))
+.thenReturn(student);
+
+Student result =
+studentService.saveStudent(student);
+
+assertSame(student, result);
+verify(studentRepository)
+.save(student);
+}
 }
  

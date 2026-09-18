@@ -41,5 +41,6 @@ jobs:
 
       - name: Run Maven tests
 
-        run: mvn -B test
+        working-directory: ./student
+        run: test -f pom.xml && mvn -B test
  
